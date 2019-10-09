@@ -242,12 +242,6 @@ body{
   margin: 0 5%;
 }
 
-button, input {
-    overflow: visible;
-    /* border-radius: 5px; */
-    width: 450px;
-}
-
 .month {
   padding: 60px 25px;
   width: 100%;
