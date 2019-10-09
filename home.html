@@ -23,28 +23,6 @@
 
     <div id="contentContainer" class="">
       <div id="content">
-        <div id="options">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="hotelBtn" value="option1">
-            <label class="form-check-label" for="inlineRadio1">Hotel</label>
-          </div>
-
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="motelBtn" value="option2">
-            <label class="form-check-label" for="inlineRadio2">Motel</label>
-          </div>
-
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="houseBtn" value="option3">
-            <label class="form-check-label" for="inlineRadio3">House</label>
-          </div>
-
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="hostelBtn" value="option4">
-            <label class="form-check-label" for="inlineRadio4">Hostel</label>
-          </div>
-        </div>
-
         <div id="sections">
 
             <div class="location row d-flex justify-content-center">
@@ -56,14 +34,15 @@
                   <label class="col-form-label">Location:</label>
                       <div class="col d-flex align-items-center">
                         <select class="form-control" id="location" placeholder="Enter a location">
-                          <option>Auckland</option>
-                          <option>Hamilton</option>
-                          <option>Moteuka</option>
-                          <option>Queenstown</option>
-                          <option>Christchurch</option>
-                          <option>Dunedin</option>
-                          <option>Napier</option>
-                          <option>New Plymouth</option>
+                          <option id="all">All</option>
+                          <option id="auckland">Auckland</option>
+                          <option id="hamilton">Hamilton</option>
+                          <option id="moteuka">Moteuka</option>
+                          <option id="queenstown">Queenstown</option>
+                          <option id="christchurch">Christchurch</option>
+                          <option id="dunedin">Dunedin</option>
+                          <option id="napier">Napier</option>
+                          <option id="newPlymouth">New Plymouth</option>
                         </select>
                       </div>
                   </div>
@@ -84,7 +63,7 @@
               </div>
             </div>
 
-            <div class="checkOut row d-flex justify-content-center">
+             <div class="checkOut row d-flex justify-content-center">
               <div class="col-1">
                 <img src="images/calendar.png" class="img-fluid" alt="calendar icon">
               </div>
@@ -104,7 +83,7 @@
               </div>
               <div class="col-11">
                    <div class="form-group row mb-0">
-                   <label class="col-form-label">   Guest:</label>
+                   <label class="col-form-label">Guest:</label>
                        <div class="col d-flex align-items-center">
                          <select class="form-control" id="guestSelect">
                            <option>1</option>
@@ -148,7 +127,7 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <script src="js/script2.js"></script>
+    <script src="js/script3.js"></script>
   </body>
 
 </html>

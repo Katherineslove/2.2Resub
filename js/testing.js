@@ -1,37 +1,54 @@
-$('#hotelBtn').click(function(){
-  console.log('hotel');
-})
-
-$('#motelBtn').click(function(){
-  console.log('motel');
-})
-
-$('#houseBtn').click(function(){
-  console.log('house');
-})
-
-$('#hostelBtn').click(function(){
-  console.log('hostel');
-})
-
 $('#locationBtn').click(function(){
   console.log('location');
 })
 
-$('#checkinBtn').click(function(){
-  console.log('check in ');
+$('#all').click(function(){
+  console.log('all');
 })
 
-$('#checkoutBtn').click(function(){
-  console.log('check out');
+$('#auckland').click(function(){
+  console.log('auckland');
 })
 
-$('#guestBtn').click(function(){
-  console.log('guests');
+$('#hamilton').click(function(){
+  console.log('hamilton');
+})
+
+$('#moteuka').click(function(){
+  console.log('moteuka');
+})
+
+$('#queenstown').click(function(){
+  console.log('queenstown');
+})
+
+$('#christchurch').click(function(){
+  console.log('christchurch');
+})
+
+$('#dunedin').click(function(){
+  console.log('dunedin');
+})
+
+$('#napier').click(function(){
+  console.log('napier');
+})
+
+$('#newPlymouth').click(function(){
+  console.log('new plymouth');
 })
 
 $('#search').click(function(){
-  console.log('submitted');
+  event.preventDefault();
+
+  var location = $('#location').val();
+  var guests = $('#guestBtn').val();
+  console.log(location);
+  console.log(guests);
+  // $('#location').addClass('hidden');
+  // $('#search').addClass('hidden');
+
+
 })
 
 
@@ -48,16 +65,17 @@ $('#search').click(function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
+// $('#checkinBtn').click(function(){
+//   console.log('check in ');
+// })
+//
+// $('#checkoutBtn').click(function(){
+//   console.log('check out');
+// })
+//
+// $('#guestBtn').click(function(){
+//   console.log('guests');
+// })
 
 
 var dateDiff;

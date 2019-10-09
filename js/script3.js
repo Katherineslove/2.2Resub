@@ -6,8 +6,6 @@ var accommodationOptions = [
     title: 'Waldorf Stadium Apartments Hotel',
     type: 'Hotel',
     cost: 157,
-    lat: -36.846580,
-    lng: 174.773410,
     location: 'Auckland',
     minNight: 1,
     maxNight: 5,
@@ -21,8 +19,6 @@ var accommodationOptions = [
     title: 'Airport Garden Inn',
     type: 'Motel',
     cost: 90,
-    lat: -36.975460,
-    lng: 174.816870,
     location: 'Auckland',
     minNight: 2,
     maxNight: 4,
@@ -36,8 +32,6 @@ var accommodationOptions = [
     title: 'Backpackers Central Hamilton',
     type: 'Hostel',
     cost: 30,
-    lat: -37.780841,
-    lng: 175.277586,
     location: 'Hamilton',
     minNight: 1,
     maxNight: 10,
@@ -51,8 +45,6 @@ var accommodationOptions = [
     title: 'Serene Studio in Motueka',
     type: 'House',
     cost: 240,
-    lat: -41.106991,
-    lng: 173.002472,
     location: 'Moteuka',
     minNight: 2,
     maxNight: 15,
@@ -66,8 +58,6 @@ var accommodationOptions = [
     title: 'Hilton Queenstown Resort & Spa',
     type: 'Hotel',
     cost: 157,
-    lat: -45.029461,
-    lng: 168.727844,
     location: 'Queenstown',
     minNight: 1,
     maxNight: 5,
@@ -81,8 +71,6 @@ var accommodationOptions = [
     title: 'Jailhouse Accommodation',
     type: 'Hostel',
     cost: 30,
-    lat: -43.543424,
-    lng: 172.614116,
     location: 'Christchurch',
     minNight: 1,
     maxNight: 10,
@@ -96,8 +84,6 @@ var accommodationOptions = [
     title: 'Private Secluded House',
     type: 'House',
     cost: 240,
-    lat: -45.900988,
-    lng: 170.509934,
     location: 'Dunedin',
     minNight: 2,
     maxNight: 15,
@@ -111,8 +97,6 @@ var accommodationOptions = [
     title: 'Albatross Motel',
     type: 'Motel',
     cost: 90,
-    lat: -39.478718,
-    lng: 176.882508,
     location: 'Napier',
     minNight: 2,
     maxNight: 4,
@@ -126,8 +110,6 @@ var accommodationOptions = [
     title: 'Egmont Eco',
     type: 'Hostel',
     cost: 30,
-    lat: -39.070399,
-    lng: 174.069812,
     location: 'New Plymouth',
     minNight: 1,
     maxNight: 10,
@@ -212,6 +194,64 @@ $(document).ready(function(){
     $('#results').addClass('hidden');
   });
 
+  $('.search').click(function(){
+
+    var location = $('#location').val();
+    var guests = $('#guestSelect').val();
+
+    for (var i = 0; i < accommodationOptions.length; i++) {
+      if(location === accommodationOptions[i].location) {
+        if(guests >= accommodationOptions[i].minPeople && guests <= accommodationOptions[i].maxPeople) {
+          if ((dateDiff >= accommodationOptions[i].minNight && dateDiff <= accommodationOptions[i].maxNight)) {
+            $('#filter').append(
+              `<div class="col-12 col-sm-6 col-md-4 mb-3 text-center">
+                  <div class="card">
+                    <img src="images/thumbnails/${accommodationOptions[i].image}" class="card-img-top" alt="">
+                      <div class="card-body">
+                          <h5 class="card-title">${accommodationOptions[i].title}</h5>
+                          <p class="card-text">${accommodationOptions[i].description}</p>
+                          <p class="card-text">$${accommodationOptions[i].cost} / per night</p>
+                          <div id="booking" class="btn btn-primary" onclick="booking(${accommodationOptions[i].id})"> Make a booking </div>
+                      </div>
+                  </div>
+              </div>`
+            );
+            console.log(accommodationOptions[i]);
+        } else {
+            $('#filter').html(
+              "<h2> Sorry there are no accommodation options that match your request </h2>"
+            )
+          }
+        }
+      }
+    }
+  })
+});
+
+var dateDiff;
+var d1;
+var d2;
+var select = function(dateStr) {
+     d1 = $('#from').datepicker('getDate');
+     d2 = $('#to').datepicker('getDate');
+    var diff = 0;
+    if (d1 && d2) {
+          diff = Math.floor((d2.getTime() - d1.getTime()) / 86400000); // ms per day
+    };
+    dateDiff = diff;
+    console.log(dateDiff);
+};
+
+$('#from').datepicker({
+  minDate: new Date(2019, 10 - 1, 3),
+  maxDate: new Date(2019, 12 - 1, 31),
+  onSelect: select,
+});
+
+$('#to').datepicker({
+  onSelect: select
+});
+
   // when the search button is clicked show an error or proceed
 
     $('.search').click(function(){
@@ -233,59 +273,56 @@ $(document).ready(function(){
         $('.search').fadeOut(1000);
         $('#results').delay(1000).queue(function(next){
           $('#results').removeClass('hidden');
-          $('#filter').removeClass('hidden');
+          // $('#filter').removeClass('hidden');
           next();
         });
       };
 
     });
 
-});
 
-
-
-// function that shows the accommodation options
-var guestSelect;
-var totalCost;
-  $('.search').click(function(){
-      var location = $('#location').val();
-      guestSelect = parseInt($('#guestSelect').val());
-      // $("#locationName").html(location);
-      // $("#stayTime").html(`Your stay is from ${d1} till ${d2}`);
-      // $("#nights").html(dateDiff);
-
-    for (var i = 0; i < accommodationOptions.length; i++){
-      if (location.length === 0) {
-          console.log('need to input');
-      } else if (accommodationOptions[i] === 0){
-          console.log('Sorry! There is nothing avaliable, please try again');
-      } else {
-          $('#filter').empty();
-            for (var a = 0; a < accommodationOptions.length; a++) {
-                 if ((location === accommodationOptions[a].location) && (dateDiff >= accommodationOptions[a].minNight && dateDiff <= accommodationOptions[a].maxNight) && (guestSelect >= accommodationOptions[a].minPeople && guestSelect <= accommodationOptions[a].maxPeople)){
-                  $('#filter').append(
-                    `<div class="col-12 col-sm-6 col-md-4 mb-3 text-center">
-                        <div class="card">
-                          <img src="images/thumbnails/${accommodationOptions[a].image}" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">${accommodationOptions[a].title}</h5>
-                                <p class="card-text">${accommodationOptions[a].description}</p>
-                                <p class="card-text">$${accommodationOptions[a].cost} / per night</p>
-                                <div id="booking" class="btn btn-primary" onclick="booking(${accommodationOptions[a].id})"> Make a booking </div>
-                            </div>
-                        </div>
-                    </div>`
-                    );
-                } else {
-                    $('#filter').html(
-                  "<h2> Sorry there are no accommodation options that match your request </h2>"
-                )
-                }
-
-            }
-        }
-    }
-  })
+// // function that shows the accommodation options
+// var guestSelect;
+// var totalCost;
+//   $('.search').click(function(){
+//       var location = $('#location').val();
+//       guestSelect = parseInt($('#guestSelect').val());
+//       // $("#locationName").html(location);
+//       // $("#stayTime").html(`Your stay is from ${d1} till ${d2}`);
+//       // $("#nights").html(dateDiff);
+//
+//     for (var i = 0; i < accommodationOptions.length; i++){
+//       if (location.length === 0) {
+//           console.log('need to input');
+//       } else if (accommodationOptions[i] === 0){
+//           console.log('Sorry! There is nothing avaliable, please try again');
+//       } else {
+//           $('#filter').empty();
+//             for (var a = 0; a < accommodationOptions.length; a++) {
+//                  if ((location === accommodationOptions[a].location) && (dateDiff >= accommodationOptions[a].minNight && dateDiff <= accommodationOptions[a].maxNight) && (guestSelect >= accommodationOptions[a].minPeople && guestSelect <= accommodationOptions[a].maxPeople)){
+//                   $('#filter').append(
+//                     `<div class="col-12 col-sm-6 col-md-4 mb-3 text-center">
+//                         <div class="card">
+//                           <img src="images/thumbnails/${accommodationOptions[a].image}" class="card-img-top" alt="">
+//                             <div class="card-body">
+//                                 <h5 class="card-title">${accommodationOptions[a].title}</h5>
+//                                 <p class="card-text">${accommodationOptions[a].description}</p>
+//                                 <p class="card-text">$${accommodationOptions[a].cost} / per night</p>
+//                                 <div id="booking" class="btn btn-primary" onclick="booking(${accommodationOptions[a].id})"> Make a booking </div>
+//                             </div>
+//                         </div>
+//                     </div>`
+//                     );
+//                 } else {
+//                     $('#filter').html(
+//                   "<h2> Sorry there are no accommodation options that match your request </h2>"
+//                 )
+//                 }
+//
+//             }
+//         }
+//     }
+//   })
 
 
 
@@ -348,26 +385,3 @@ const inputOptions = new Promise((resolve) => {
 })()
 
 };
-    var dateDiff;
-    var d1;
-    var d2;
-    var select = function(dateStr) {
-         d1 = $('#from').datepicker('getDate');
-         d2 = $('#to').datepicker('getDate');
-        var diff = 0;
-        if (d1 && d2) {
-              diff = Math.floor((d2.getTime() - d1.getTime()) / 86400000); // ms per day
-        };
-        dateDiff = diff;
-        console.log(dateDiff);
-    };
-
-    $('#from').datepicker({
-      minDate: new Date(2019, 8 - 1, 22),
-      maxDate: new Date(2019, 9 - 1, 28),
-      onSelect: select,
-    });
-
-    $('#to').datepicker({
-      onSelect: select
-    });
