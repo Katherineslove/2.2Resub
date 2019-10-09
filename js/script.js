@@ -6,8 +6,6 @@ var accommodationOptions = [
     title: 'Waldorf Stadium Apartments Hotel',
     type: 'Hotel',
     cost: 157,
-    lat: -36.846580,
-    lng: 174.773410,
     location: 'Auckland',
     minNight: 1,
     maxNight: 5,
@@ -21,8 +19,6 @@ var accommodationOptions = [
     title: 'Airport Garden Inn',
     type: 'Motel',
     cost: 90,
-    lat: -36.975460,
-    lng: 174.816870,
     location: 'Auckland',
     minNight: 2,
     maxNight: 4,
@@ -36,23 +32,32 @@ var accommodationOptions = [
     title: 'Backpackers Central Hamilton',
     type: 'Hostel',
     cost: 30,
-    lat: -37.780841,
-    lng: 175.277586,
     location: 'Hamilton',
     minNight: 1,
     maxNight: 10,
     minPeople: 1,
     maxPeople: 1,
-    description: 'Backpackers Central Hamilton offers hostel in the centre of Hamilton, less than 5 minutes walk from local shops, restaurants and cafes. Free WiFi and free lockers are provided.',
+    description: 'Backpackers Central Hamilton offers hostel in the centre of Hamilton. Free WiFi and free lockers are provided.',
     image: 'backpackers.jpg'
   },
   {
     id: 4,
+    title: 'ibis Hamilton Tainui Hotel',
+    type: 'Hotel',
+    cost: 157,
+    location: 'Hamilton',
+    minNight: 1,
+    maxNight: 5,
+    minPeople: 1,
+    maxPeople: 2,
+    description: 'ibis Hamilton Tainui is your gateway to the Waikato region commanding a unique location on the banks of the Waikato River. ',
+    image: 'hamilton.jpeg'
+  },
+  {
+    id: 5,
     title: 'Serene Studio in Motueka',
     type: 'House',
     cost: 240,
-    lat: -41.106991,
-    lng: 173.002472,
     location: 'Moteuka',
     minNight: 2,
     maxNight: 15,
@@ -62,12 +67,23 @@ var accommodationOptions = [
     image: 'studio.png'
   },
   {
-    id: 5,
+    id: 6,
+    title: 'Moteuka Garden Motel',
+    type: 'Motel',
+    cost: 90,
+    location: 'Moteuka',
+    minNight: 2,
+    maxNight: 4,
+    minPeople: 3,
+    maxPeople: 10,
+    description: 'Motueka Garden Motel offers an affordable, comfortable place to stay with a friendly family atmosphere to allow you to enjoy the simple things.',
+    image: 'moteukaGarden.jpg'
+  },
+  {
+    id: 7,
     title: 'Hilton Queenstown Resort & Spa',
     type: 'Hotel',
     cost: 157,
-    lat: -45.029461,
-    lng: 168.727844,
     location: 'Queenstown',
     minNight: 1,
     maxNight: 5,
@@ -77,12 +93,23 @@ var accommodationOptions = [
     image: 'queenstown.png'
   },
   {
-    id: 6,
+    id: 8,
+    title: 'Heritage Queenstown',
+    type: 'Hotel',
+    cost: 157,
+    location: 'Queenstown',
+    minNight: 1,
+    maxNight: 5,
+    minPeople: 1,
+    maxPeople: 2,
+    description: 'Sophisticated alpine hotel featuring lake views, plus a restaurant/bar, a spa & a heated pool.',
+    image: 'hertiage.png'
+  },
+  {
+    id: 9,
     title: 'Jailhouse Accommodation',
     type: 'Hostel',
     cost: 30,
-    lat: -43.543424,
-    lng: 172.614116,
     location: 'Christchurch',
     minNight: 1,
     maxNight: 10,
@@ -92,12 +119,23 @@ var accommodationOptions = [
     image: 'jailhouse.png'
   },
   {
-    id: 7,
+    id: 10,
+    title: 'Prince of Bealey Motel',
+    type: 'Hostel',
+    cost: 90,
+    location: 'Christchurch',
+    minNight: 2,
+    maxNight: 4,
+    minPeople: 3,
+    maxPeople: 10,
+    description: 'Low-key hostel in a Gothic Revival-style prison with a coffee bar, a game room & a guest kitchen.',
+    image: 'prince.png'
+  },
+  {
+    id: 11,
     title: 'Private Secluded House',
     type: 'House',
     cost: 240,
-    lat: -45.900988,
-    lng: 170.509934,
     location: 'Dunedin',
     minNight: 2,
     maxNight: 15,
@@ -107,12 +145,23 @@ var accommodationOptions = [
     image: 'dunedin.png'
   },
   {
-    id: 8,
+    id: 12,
+    title: 'Central Backpackers Dunedin',
+    type: 'Hostel',
+    cost: 90,
+    location: 'Dunedin',
+    minNight: 2,
+    maxNight: 4,
+    minPeople: 3,
+    maxPeople: 10,
+    description: 'Unfussy dorms & rooms in a low-key hostel with a fireside TV lounge, a guest kitchen & a laundry.',
+    image: 'backpackersDunedin.jpeg'
+  },
+  {
+    id: 13,
     title: 'Albatross Motel',
     type: 'Motel',
     cost: 90,
-    lat: -39.478718,
-    lng: 176.882508,
     location: 'Napier',
     minNight: 2,
     maxNight: 4,
@@ -122,12 +171,23 @@ var accommodationOptions = [
     image: 'napier.png'
   },
   {
-    id: 9,
+    id: 14,
+    title: 'Beach Front Motel',
+    type: 'Motel',
+    cost: 90,
+    location: 'Napier',
+    minNight: 2,
+    maxNight: 4,
+    minPeople: 3,
+    maxPeople: 10,
+    description: 'Bright, modern suites & apartments with kitchenettes and/or sea-view balconies, plus free Wi-Fi.',
+    image: 'beachFront.png'
+  },
+  {
+    id: 15,
     title: 'Egmont Eco',
     type: 'Hostel',
     cost: 30,
-    lat: -39.070399,
-    lng: 174.069812,
     location: 'New Plymouth',
     minNight: 1,
     maxNight: 10,
@@ -135,9 +195,21 @@ var accommodationOptions = [
     maxPeople: 1,
     description: 'A sunny and bright studio, this is a perfect spot to unwind and recharge. ',
     image: 'newPlymouth.png'
+},
+  {
+    id: 16,
+    title: 'Ariki Backpackers',
+    type: 'Hostel',
+    cost: 30,
+    location: 'New Plymouth',
+    minNight: 1,
+    maxNight: 10,
+    minPeople: 1,
+    maxPeople: 1,
+    description: 'Basic mixed & single-sex dorms, plus quirky private rooms, plus a shared kitchen & a lounge.',
+    image: 'ariki.jpeg'
   }
 ];
-
 
 // Everything that is working on load.
 $(document).ready(function(){
@@ -145,24 +217,24 @@ $(document).ready(function(){
   var started = false;
 
 
-// When the start button is clicked this function begins to work
-  $('#start').click(function(){
-    if(started === false){
-      $(this).fadeOut(1000);
-      $('.getStart').addClass('started');
-      $('.getStartContent').addClass('startedContent');
-      $('#contentContainer').removeClass('contentContainerStart');
-      $('#contentContainer').removeClass('showResults');
-      $('.checkIn').removeClass('card-img-top');
-      $('.checkOut').removeClass('card-img-top');
-      $('.travellers').removeClass('card-img-top guestsOverlay');
-      setTimeout(function(){
-        started = true;
-      }, 1000);
-    }
-  })
+  // When the start button is clicked this function begins to work
+    $('#start').click(function(){
+      if(started === false){
+        $(this).fadeOut(1000);
+        $('.getStart').addClass('started');
+        $('.getStartContent').addClass('startedContent');
+        $('#contentContainer').removeClass('contentContainerStart');
+        $('#contentContainer').removeClass('showResults');
+        $('.checkIn').removeClass('card-img-top');
+        $('.checkOut').removeClass('card-img-top');
+        $('.travellers').removeClass('card-img-top guestsOverlay');
+        setTimeout(function(){
+          started = true;
+        }, 1000);
+      }
+    })
 
-  $('#logo').click(function(){
+    $('#logo').click(function(){
     if(started === true){
       $('#start').fadeIn(1000);
       $('.getStart').removeClass('started');
@@ -173,8 +245,8 @@ $(document).ready(function(){
       }, 1000);
     }
   })
- //-----------------------------------------
-// The code for the buttons to change colour
+
+  // The code for the buttons to change colour
   $('#hotel').click(function(){
     $('.hotel').css('background', 'black');
     $('.motel').css('background', '#808080');
@@ -203,8 +275,74 @@ $(document).ready(function(){
     $('.hostel').css('background', 'black');
   });
 
-   //-----------------------------------------
-// when the search button is clicked show an error or proceed
+  $('.backToStart').click(function(){
+    $('#options').fadeIn(300);
+    $('#sections').fadeIn(300);
+    $('.search').fadeIn(300);
+    $('#filter').fadeOut(300);
+    $('#places').fadeOut(300);
+    $('#details').hidden;
+    $('#results').addClass('hidden');
+  });
+
+  $('.search').click(function(){
+    var location = $('#location').val();
+    var guests = $('#guestSelect').val();
+
+    for (var i = 0; i < accommodationOptions.length; i++) {
+      if(location === accommodationOptions[i].location) {
+        if(guests >= accommodationOptions[i].minPeople && guests <= accommodationOptions[i].maxPeople) {
+          if ((dateDiff >= accommodationOptions[i].minNight && dateDiff <= accommodationOptions[i].maxNight)) {
+            $('#filter').append(
+              `<div class="col-12 col-sm-6 col-md-4 mb-3 text-center">
+                  <div class="card">
+                    <img src="images/thumbnails/${accommodationOptions[i].image}" class="card-img-top" alt="">
+                      <div class="card-body">
+                          <h5 class="card-title">${accommodationOptions[i].title}</h5>
+                          <p class="card-text">${accommodationOptions[i].description}</p>
+                          <p class="card-text">$${accommodationOptions[i].cost} / per night</p>
+                          <div id="booking" class="btn btn-primary" onclick="booking(${accommodationOptions[i].id})"> Make a booking </div>
+                      </div>
+                  </div>
+              </div>`
+            );
+            console.log(accommodationOptions[i]);
+        } else {
+            $('#filter').html(
+              "<h2> Sorry there are no accommodation options that match your request </h2>"
+            )
+          }
+        }
+      }
+    }
+  })
+});
+
+var dateDiff;
+var d1;
+var d2;
+var select = function(dateStr) {
+     d1 = $('#from').datepicker('getDate');
+     d2 = $('#to').datepicker('getDate');
+    var diff = 0;
+    if (d1 && d2) {
+          diff = Math.floor((d2.getTime() - d1.getTime()) / 86400000); // ms per day
+    };
+    dateDiff = diff;
+    console.log(dateDiff);
+};
+
+$('#from').datepicker({
+  minDate: new Date(2019, 10 - 1, 3),
+  maxDate: new Date(2019, 12 - 1, 31),
+  onSelect: select,
+});
+
+$('#to').datepicker({
+  onSelect: select
+});
+
+  // when the search button is clicked show an error or proceed
 
     $('.search').click(function(){
       var inputCheck = true;
@@ -228,89 +366,65 @@ $(document).ready(function(){
           $('#filter').removeClass('hidden');
           next();
         });
-        displayRooms();
       };
 
     });
 
-});
+var adding = '';
+var nightCost
+var totalCostMeal
 
-// code for the calenders to work
-$( function() {
-    $( '#datepicker' ).datepicker();
-  } );
-
-$( function() {
-    $( '#datepicker2' ).datepicker();
-  } );
-
-$('.backToStart').click(function(){
-  $('#options').fadeIn(300);
-  $('#sections').fadeIn(300);
-  $('.search').fadeIn(300);
-  $('#filter').fadeOut(300);
-  $('#places').fadeOut(300);
-  $('#details').hidden;
-  $('#results').addClass('hidden');
-});
-
-// function that shows the accommodation options
-function displayRooms() {
-
-  var optionSelect = document.getElementById('options');
-  var optionValue =  document.getElementById('options').value;
-
-  var locationSelect = document.getElementById('locationSelect');
-  var locationValue = locationSelect.options[locationSelect.selectedIndex].text;
-
-  console.log(dateDiff);
-
-  var guestSelect = document.getElementById('guestSelect');
-  var guestValue = parseInt(guestSelect.options[guestSelect.selectedIndex].text);
-
-  var finalArray = [];
-
-  for (var i = 0; i < accommodationOptions.length; i++) {
-    if ((dateDiff >= accommodationOptions[i].minNight && dateDiff <= accommodationOptions[i].maxNight) && (guestValue >= accommodationOptions[i].minPeople && guestValue <= accommodationOptions[i].maxPeople)) {
-      finalArray.push(accommodationOptions[i]);
-    };
-};
-
-  for (var i = 0; i < finalArray.length; i++) {
-
-    var card = '';
-    card += '<div class="col-12 col-sm-6 col-md-4 mb-3 text-center">';
-    card += '<div class="card">';
-        card += '<img src="images/thumbnails/'+finalArray[i].image+ '" class="card-img-top" alt="">';
-        card += '<div class="card-body">';
-        card += '<h5 class="card-title">'+finalArray[i].title+'</h5>';
-        card +=   '<p class="card-text">' + finalArray[i].description +'</p>';
-        card +=   '<p class="card-text">' + '$' + finalArray[i].cost +'</p>';
-        card +=   '<button href="#" class="btn btn-primary"> Make a booking </button>';
-      card +=   '</div>';
-    card +=   '</div>';
-    card += '</div>';
-
-    document.getElementById('filter').innerHTML += card;
+function booking(accommodationID) {
+  for (var j = 0; j < accommodationOptions.length; j++) {
+    if (accommodationOptions[j].id === accommodationID) {
+      selectedAccommodation = accommodationOptions[j];
+      break;
+    }
   }
-}
+  nightCost = selectedAccommodation.cost;
+  console.log(nightCost);
+  totalCost = Math.ceil((parseInt(dateDiff) * nightCost + adding));
 
+    (async () => {
 
-var dateDiff;
-var select = function(dateStr) {
-    var d1 = $('#datepicker').datepicker('getDate');
-    var d2 = $('#datepicker2').datepicker('getDate');
-    var diff = 0;
-    if (d1 && d2) {
-          diff = Math.floor((d2.getTime() - d1.getTime()) / 86400000); // ms per day
-    };
-    dateDiff = diff;
+const inputOptions = new Promise((resolve) => {
+
+      setTimeout(() => {
+        resolve({
+            '25 per person': 'Breakfast Included',
+            '70 per person': 'Dinner Included',
+        })
+      }, 1000)
+    })
+    const { value: price } = await Swal.fire({
+      title: 'Select meal option',
+      input: 'radio',
+      inputOptions: inputOptions,
+      inputValidator: (value) => {
+        if (!value) {
+          return 'You need to choose something!'
+        }
+      }
+    })
+
+    if (price) {
+      Swal.fire({ html: 'That will cost $' + price })
+      adding = parseInt(price);
+      console.log(adding);
+      totalCostMeal = Math.ceil(totalCost + adding);
+      console.log("$" + totalCostMeal);
+
+      const { value: email } = await Swal.fire({
+        title: `Your total comes to $${totalCostMeal}.`,
+        input: 'email',
+        inputPlaceholder: 'Enter your email address'
+      })
+
+      if (email) {
+        Swal.fire('Your confirmation has been sent to ' + email)
+      }
+    }
+
+})()
+
 };
-
-$('#datepicker').datepicker({
-  minDate: new Date(2019, 7 - 1, 8),
-  maxDate: new Date(2019, 7 - 1, 28),
-  onSelect: select,
-});
-
-$('#datepicker2').datepicker({onSelect: select});

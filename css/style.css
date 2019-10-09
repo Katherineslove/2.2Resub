@@ -401,8 +401,6 @@ body{
   left: 5%;
   width: 85%;
   position: relative;
-  background-color: white;
   color: black;
-  border: 1px solid #808080;
   flex-wrap: wrap;
 }
