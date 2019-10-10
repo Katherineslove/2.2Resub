@@ -123,83 +123,6 @@ body{
   height: 80vh;
 }
 
-#options{
-  width: 90%;
-  margin-left: 40px;
-  height: 20vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-#options h1 {
-  position: absolute;
-  top: 9%;
-  left:  34%;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-size: 25px;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 0 -8%;
-}
-
-#hotel{
-  background-color: #808080;
-  border-radius: 10px;
-  position: relative;
-  width: 20%;
-  height: 20%;
-  top: 30%;
-  left: 2.5%;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-size: 25px;
-  text-align: center;
-}
-
-#motel{
-  background-color: #808080;
-  border-radius: 10px;
-  position: relative;
-  width: 20%;
-  height: 20%;
-  top: 30%;
-  left: 2.5%;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-size: 25px;
-  text-align: center;
-}
-
-#house{
-  background-color: #808080;
-  border-radius: 10px;
-  position: relative;
-  width: 20%;
-  height: 20%;
-  top: 30%;
-  left: 2.5%;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-size: 25px;
-  text-align: center;
-}
-
-#hostel{
-  background-color: #808080;
-  border-radius: 10px;
-  position: relative;
-  width: 20%;
-  height: 20%;
-  top: 30%;
-  left: 2.5%;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-size: 25px;
-  text-align: center;
-}
-
 #sections{
   margin: 0 auto;
   width: 95%;
@@ -208,6 +131,8 @@ body{
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  top: 7%;
+  position: relative;
 }
 
 .sectionsIcons{
@@ -221,7 +146,7 @@ body{
 .location{
   background-color: white;
   width: 94.5%;
-  height: 18%;
+  height: 35%;
   position: relative;
   border: 1px solid #808080;
   border-radius: 10px;
@@ -247,11 +172,12 @@ body{
 .checkIn{
   background-color: white;
   width: 94.5%;
-  height: 18%;
+  height: 35%;
   position: relative;
   border: 1px solid #808080;
   border-radius: 10px;
   align-items: center;
+  top: 10%;
 }
 
 .checkIn label{
@@ -260,15 +186,15 @@ body{
   font-size: 25px;
 }
 
-
 .checkOut{
   background-color: white;
   width: 94.5%;
-  height: 18%;
+  height: 35%;
   position: relative;
   border: 1px solid #808080;
   border-radius: 10px;
   align-items: center;
+  top: 20%;
 }
 
 .checkOut label{
@@ -280,11 +206,12 @@ body{
 .travellers{
   background-color: white;
   width: 94.5%;
-  height: 18%;
+  height: 35%;
   position: relative;
   border: 1px solid #808080;
   border-radius: 10px;
   align-items: center;
+  top: 30%;
 }
 
 .travellers label{
@@ -296,18 +223,18 @@ body{
 .search{
   background-color: #808080;
   width: 35%;
-  height: 8%;
-  position: absolute;
-  top: 83%;
-  left: 31%;
+  height: 20%;
+  position: relative;
+  top: 57%;
+  left: 3%;
   border: 1px solid #808080;
   border-radius: 10px;
 }
 
 .search h1 {
   position: absolute;
-  top: 25%;
-  left: 34%;
+  top: 10%;
+  left: 28%;
   color: white;
   font-family: 'Roboto', sans-serif;
   font-size: 31px;
@@ -401,8 +328,6 @@ body{
   left: 5%;
   width: 85%;
   position: relative;
-  background-color: white;
   color: black;
-  border: 1px solid #808080;
   flex-wrap: wrap;
 }
